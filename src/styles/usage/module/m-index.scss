@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "./common";
+#app{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  #box{
+    @include flexbox();
+    @include flex-direction(column);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @extend %header;
+    @extend %section;
+    @extend %footer;
+  }
+}
