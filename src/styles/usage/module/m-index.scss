@@ -10,8 +10,34 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    @extend %header;
-    @extend %section;
+    #index{
+      @include flex();
+      @include flexbox();
+      @include flex-direction(column);
+      width: 100%;
+      height: 100%;
+      @extend %header;
+      #wrapper{
+        @include flex();
+        width: 100%;
+        overflow-y: scroll;
+        #banner{
+          height: 1.5rem;
+          width: 100%;
+          .swiper-wrapper{
+            height: 1.5rem;
+            width: 100%;
+            .swiper-slide{
+              height: 1.5rem;
+              width: 100%;
+              img{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
     @extend %footer;
   }
 }

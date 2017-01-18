@@ -16,17 +16,20 @@ module.exports={
         test:/\.css$/,
         loader:'style!css'
       },
-      {
-        test:/\.js$/,
-        loader:'babel-loader?presets[]=es2015'
-      },
+      
       {
         test:/\.scss$/,
         loader:ET.extract('style','css!sass')
       },
+
       {
-        test:/\.js$/,
-        loader:'jsx-loader'
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        query:
+        {
+          presets:['react']
+        }
       }
 
     ]
